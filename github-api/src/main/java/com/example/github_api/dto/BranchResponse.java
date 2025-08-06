@@ -13,6 +13,7 @@ import lombok.experimental.FieldDefaults;
 public class BranchResponse {
     String name;
     Commit commit;
+
     public String getLastCommitSha() {
         return commit != null ? commit.getSha() : null;
     }

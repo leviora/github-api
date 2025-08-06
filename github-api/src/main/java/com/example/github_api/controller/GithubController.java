@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import java.util.List;
 
 @RestController
@@ -26,18 +27,5 @@ public class GithubController {
                 ? ResponseEntity.notFound().build()
                 : ResponseEntity.ok(repos);
     }
-
-
-
-//    @GetMapping("/{username}")
-//    public ResponseEntity<?> getUserRepos(@PathVariable String username) {
-//        List<RepositoryResponse> repos = githubService.getUserRepositories(username);
-//
-//        if (repos.isEmpty()) {
-//            return ResponseEntity.notFound().build();
-//        }
-//
-//        return ResponseEntity.ok(repos);
-//    }
 }
 
